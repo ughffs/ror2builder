@@ -26,7 +26,7 @@ const ItemBox = (props: ItemBoxProps) => {
             border='1px'
             borderColor={ borderColour }
         >
-            { content }
+            yeet my skeet biatch
         </Flex>
     );
 };
