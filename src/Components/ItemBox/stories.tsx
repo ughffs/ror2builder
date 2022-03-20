@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ChakraProvider } from '@chakra-ui/react';
-import theme from '../../../theme';
+import theme from '../../theme';
 import ItemBox, { ItemBoxProps } from './index';
 
 export default {

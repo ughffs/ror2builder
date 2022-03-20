@@ -9,17 +9,22 @@ export interface ItemTypes {
 };
 
 const ItemBox = (props: ItemBoxProps) => {
-    let content;
+    let content: string = '';
+    let borderColour: string = '#e3e3e3'; // Default to common colour
 
     if (props.itemType === 'common')
     {
         content = 'We are common'
+        borderColour = '#e3e3e3'
     };
 
     return (
         <Flex
-            bg='tomato'
+            bg='#3E4E5B'
+            color='#F8F8F8'
             flex='1'
+            border='1px'
+            borderColor={ borderColour }
         >
             { content }
         </Flex>
