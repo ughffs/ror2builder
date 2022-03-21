@@ -1,11 +1,14 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
+import ItemBoxHeader from "../ItemBoxHeader";
+import ItemIcon from "../ItemIcon";
 
 export interface ItemBoxProps {
-    itemType: ItemTypes['type']
+    itemImage: string;
+    itemType: ItemTypes['type'];
 };
 
 export interface ItemTypes {
-    type: 'common' | 'uncommon'
+    type: 'common' | 'uncommon';
 };
 
 const ItemBox = (props: ItemBoxProps) => {
@@ -23,10 +26,17 @@ const ItemBox = (props: ItemBoxProps) => {
             bg='#3E4E5B'
             color='#F8F8F8'
             flex='1'
-            border='1px'
-            borderColor={ borderColour }
+            outline='1px solid'
+            outlineColor={ borderColour }
+            flexDirection='column'
         >
-            { content }
+            <ItemBoxHeader type={ props.itemType } />
+            <Flex padding='5px' gap='10px'>
+                <ItemIcon image={ props.itemImage } />
+                <Flex flex='1'>
+                    { content }
+                </Flex>
+            </Flex>
         </Flex>
     );
 };
