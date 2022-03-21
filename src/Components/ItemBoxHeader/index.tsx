@@ -1,34 +1,23 @@
 import { Flex } from "@chakra-ui/react";
+import React from "react";
+import { getThemeBackgroundColour, getThemeBorderColour, getThemeFontColour } from "../../Shared/itemTypeService";
 import { ItemTypes } from "../ItemBox";
 
-const ItemBoxHeader = (props: ItemTypes) => {
-    let fontColour: string = '#f8f8f8'; // Set default
-    let primaryColour: string = '#b6b5b4'; // Set common as default
-    
+export interface ItemBoxHeaderProps {
+    itemType: ItemTypes['type'];
+    children: React.ReactNode;
+};
 
-    switch (props.type) {
-        case 'common':
-            fontColour = '#333333';
-            break;
-        case 'uncommon':
+const ItemBoxHeader = (props: ItemBoxHeaderProps) => {
 
-        break;
-        default:
-            break;
-    }
-
-    if (props.type === 'uncommon')
-    {
-        primaryColour = '#235a11';
-    }
-
+    let background = getThemeBackgroundColour(props.itemType);
     return (
         <Flex
-            bg={ primaryColour }
-            color={ fontColour }
+            bg={ background }
+            color={ getThemeFontColour(props.itemType) }
             flex='1'
-            outline='1px'
-            outlineColor={ primaryColour }
+            outline='1px solid'
+            outlineColor={ getThemeBorderColour(props.itemType) }
             padding='3px'            
         >
             Test Header

@@ -20,5 +20,5 @@ const Template: ComponentStory<typeof ItemBoxHeader> = (args) => {
 
 export const Main = Template.bind({});
 Main.args = {
-    type: 'common'
+    itemType: 'common'
 };

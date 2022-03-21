@@ -2,14 +2,18 @@ import { extendTheme } from '@chakra-ui/react';
 
 export default extendTheme({
     colors: {
-        brand: {
-            mustard: '#CBA135',
-            black: '#1b1b1b',
-            orange: '#f46036',
-            blue: '#6290C3',
-            white: '#fdfffc',
-            grey: '#fbfbfb',
-            darkGrey: '#dedede'
+        shared: {
+            textColour: '#F8F8F8'
+        },
+        common: {
+            textColour: '#333333',
+            backgroundColour: '#b6b5b4',
+            borderColour: '#e3e3e3'
+        },
+        uncommon: {
+            textColour: '#F8F8F8',
+            backgroundColour: '#235a11',
+            borderColour: '#53932d'
         }
     }
 });

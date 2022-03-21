@@ -22,6 +22,6 @@ const Template: ComponentStory<typeof ItemBox> = (args) => {
 
 export const Main = Template.bind({});
 Main.args = {
-    itemType: 'common',
+    itemType: 'uncommon',
     itemImage: TestImage
 };

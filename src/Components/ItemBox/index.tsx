@@ -24,13 +24,15 @@ const ItemBox = (props: ItemBoxProps) => {
     return (
         <Flex
             bg='#3E4E5B'
-            color='#F8F8F8'
+            color='shared.textColour'
             flex='1'
             outline='1px solid'
             outlineColor={ borderColour }
             flexDirection='column'
         >
-            <ItemBoxHeader type={ props.itemType } />
+            <ItemBoxHeader itemType={ props.itemType }>
+                Test
+            </ItemBoxHeader>
             <Flex padding='5px' gap='10px'>
                 <ItemIcon image={ props.itemImage } />
                 <Flex flex='1'>
