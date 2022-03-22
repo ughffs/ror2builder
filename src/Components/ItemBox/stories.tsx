@@ -14,14 +14,46 @@ const Template: ComponentStory<typeof ItemBox> = (args) => {
     return(
         <ChakraProvider theme={theme}>
             <Flex flex='1' bg='black' padding='20px'>
-                <ItemBox { ...args } />
+                <ItemBox { ...args }>
+                    Test
+                </ItemBox>
             </Flex>
         </ChakraProvider>
     )
 };
 
-export const Main = Template.bind({});
-Main.args = {
+export const Uncommon = Template.bind({});
+Uncommon.args = {
     itemType: 'uncommon',
+    itemImage: TestImage
+};
+
+export const Common = Template.bind({});
+Common.args = {
+    itemType: 'common',
+    itemImage: TestImage
+};
+
+export const Legendary = Template.bind({});
+Legendary.args = {
+    itemType: 'legendary',
+    itemImage: TestImage
+};
+
+export const Boss = Template.bind({});
+Boss.args = {
+    itemType: 'boss',
+    itemImage: TestImage
+};
+
+export const Lunar = Template.bind({});
+Lunar.args = {
+    itemType: 'lunar',
+    itemImage: TestImage
+};
+
+export const Equipment = Template.bind({});
+Equipment.args = {
+    itemType: 'equipment',
     itemImage: TestImage
 };
