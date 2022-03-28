@@ -20,7 +20,7 @@ const ItemBoxHeader = (props: ItemBoxHeaderProps) => {
             outlineColor={ getThemeBorderColour(props.itemType) }
             padding='3px'            
         >
-            Test Header
+            { props.children }
         </Flex>
     );
 };

@@ -14,9 +14,7 @@ const Template: ComponentStory<typeof ItemBox> = (args) => {
     return(
         <ChakraProvider theme={theme}>
             <Flex flex='1' bg='black' padding='20px'>
-                <ItemBox { ...args }>
-                    Test
-                </ItemBox>
+                <ItemBox  {...args } />
             </Flex>
         </ChakraProvider>
     )
@@ -24,36 +22,48 @@ const Template: ComponentStory<typeof ItemBox> = (args) => {
 
 export const Uncommon = Template.bind({});
 Uncommon.args = {
+    title: 'Test Title',
+    description: 'Increases {"type":"misc", "value":"movement speed"} by {"type":"misc", "value":"14%"} {"type":"stacking", "value":"(+14% per stack)"}.',
     itemType: 'uncommon',
     itemImage: TestImage
 };
 
 export const Common = Template.bind({});
 Common.args = {
+    title: 'Test Title',
+    description: 'Increases {"type":"misc", "value":"movement speed"} by {"type":"misc", "value":"14%"} {"type":"stacking", "value":"(+14% per stack)"}.',
     itemType: 'common',
     itemImage: TestImage
 };
 
 export const Legendary = Template.bind({});
 Legendary.args = {
+    title: 'Test Title',
+    description: 'Increases {"type":"misc", "value":"movement speed"} by {"type":"misc", "value":"14%"} {"type":"stacking", "value":"(+14% per stack)"}.',
     itemType: 'legendary',
     itemImage: TestImage
 };
 
 export const Boss = Template.bind({});
 Boss.args = {
+    title: 'Test Title',
+    description: 'Increases {"type":"misc", "value":"movement speed"} by {"type":"misc", "value":"14%"} {"type":"stacking", "value":"(+14% per stack)"}.',
     itemType: 'boss',
     itemImage: TestImage
 };
 
 export const Lunar = Template.bind({});
 Lunar.args = {
+    title: 'Test Title',
+    description: 'Increases {"type":"misc", "value":"movement speed"} by {"type":"misc", "value":"14%"} {"type":"stacking", "value":"(+14% per stack)"}.',
     itemType: 'lunar',
     itemImage: TestImage
 };
 
 export const Equipment = Template.bind({});
 Equipment.args = {
+    title: 'Test Title',
+    description: 'Increases {"type":"misc", "value":"movement speed"} by {"type":"misc", "value":"14%"} {"type":"stacking", "value":"(+14% per stack)"}.',
     itemType: 'equipment',
     itemImage: TestImage
 };
