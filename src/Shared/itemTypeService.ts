@@ -1,4 +1,4 @@
-import { ItemTypes } from "../Components/ItemBox"
+import { ItemTypes } from "../Types/app.type";
 
 export const getThemeFontColour = (value: ItemTypes['type']) : string => {
     return `${ value }.textColour`;

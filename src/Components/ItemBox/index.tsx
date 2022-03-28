@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { getThemeBorderColour } from "../../Shared/itemTypeService";
+import { ItemTypes } from "../../Types/app.type";
 import DescriptionRenderer from "../DescriptionRenderer";
 import ItemBoxHeader from "../ItemBoxHeader";
 import ItemIcon from "../ItemIcon";
@@ -12,21 +13,12 @@ export interface ItemBoxProps {
     description: string;
 };
 
-export interface ItemTypes {
-    type:   'common' | 
-            'uncommon' |
-            'legendary' |
-            'boss' | 
-            'lunar' | 
-            'equipment';
-};
-
 const ItemBox = (props: ItemBoxProps) => {
     return (
         <Flex
             bg='shared.backgroundColour'
             color='shared.textColour'
-            flex='1'
+            width='350px'
             outline='1px solid'
             outlineColor={ getThemeBorderColour(props.itemType) }
             flexDirection='column'

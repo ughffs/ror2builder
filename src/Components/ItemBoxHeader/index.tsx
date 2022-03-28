@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { getThemeBackgroundColour, getThemeBorderColour, getThemeFontColour } from "../../Shared/itemTypeService";
-import { ItemTypes } from "../ItemBox";
+import { ItemTypes } from "../../Types/app.type";
 
 export interface ItemBoxHeaderProps {
     itemType: ItemTypes['type'];
