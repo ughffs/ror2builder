@@ -11,8 +11,6 @@ const DescriptionRenderer = (props: DescriptionRendererProps) => {
         
         let objType = object.type;
         let objText = object.value;
-
-        console.log(objText);
         
         return "<span class='text-class-" + objType + "'>" + objText + "</span>";
     });

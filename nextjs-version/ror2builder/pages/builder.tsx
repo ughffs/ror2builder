@@ -1,3 +1,4 @@
+import { Flex } from "@chakra-ui/react";
 import { useState } from "react";
 import ItemGrid from "../components/itemGrid";
 import ItemIcon from "../components/itemIcon";
@@ -10,8 +11,9 @@ const Builder = () => {
 
     return (
         <Layout>
-            <ItemGrid items={items}/>
-            <ItemIcon image="/images/uncommon/bandolier.png" />
+            <Flex height='calc(100vh - 80px)' overflowY='auto' paddingBottom='5px'>
+                <ItemGrid items={items}/>
+            </Flex>
         </Layout>
     )
 }

@@ -33,10 +33,8 @@ const Layout = (props: LayoutProps) => {
                 />
             </Flex>
             <Flex justifyContent='center'>
-                <Flex width='1000px' gap='20px' paddingTop='20px'>
-                    <Flex>
-                        <SideMenu />
-                    </Flex>
+                <Flex width='1000px' gap='20px' paddingTop='20px' height='calc(100vh - 50px)' overflow='hidden'>
+                    <SideMenu />
                     <Flex flex='1'>
                         <main>{props.children}</main>
                     </Flex>
