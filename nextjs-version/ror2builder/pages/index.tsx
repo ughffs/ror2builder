@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout from '../components/layout';
+import Layout from '../components/layout/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import { GetStaticProps } from 'next';
@@ -12,7 +12,7 @@ type Post = {
 
 export default function Home({ allPostsData }: any) {
   return (
-    <Layout home>
+    <Layout>
       <Head>
         <title>Home Page</title>
       </Head>

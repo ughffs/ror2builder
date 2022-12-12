@@ -8,6 +8,14 @@ body {
   color: '#F8F8F8'
 }
 
+html,
+body,
+#__next,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
 a {
   color: inherit;
   text-decoration: none;

@@ -1,0 +1,23 @@
+.text-class-offense {
+  color: #e5c962;
+}
+.text-class-defense {
+  color: #9ce562;
+}
+.text-class-healing {
+  color: #9ce562;
+}
+.text-class-cdr {
+  color: #00ffcc;
+}
+.text-class-misc {
+  color: #95cde5;
+}
+.text-class-stacking {
+  color: rgb(159, 164, 182);
+  font-size: 14px;
+  text-shadow: 1px 0 1px black;
+}
+.text-class-debuff {
+  color: #e58262;
+}
