@@ -11,7 +11,7 @@ export interface ItemBoxProps {
     itemType: ItemTypes['type'];
     title: string;
     description: string;
-    onClick: () => void
+    onClick: () => void;
 };
 
 const ItemBox = (props: ItemBoxProps) => {
@@ -24,6 +24,8 @@ const ItemBox = (props: ItemBoxProps) => {
             outlineColor={ getThemeBorderColour(props.itemType) }
             flexDirection='column'
             onClick={props.onClick}
+            cursor='pointer'
+            userSelect='none'
         >
             <ItemBoxHeader itemType={ props.itemType }>
                 { props.title }
