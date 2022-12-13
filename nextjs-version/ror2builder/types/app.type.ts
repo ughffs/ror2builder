@@ -6,6 +6,11 @@ export interface Item {
     description: string;
 };
 
+export interface ItemDisplayModel {
+    item: Item,
+    stackCount: number
+}
+
 export interface ItemTypes {
     type:   'common' | 
             'uncommon' |
