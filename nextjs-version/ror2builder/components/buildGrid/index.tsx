@@ -15,22 +15,42 @@ const ItemGrid = (props: BuildGridProps) => {
     }
 
     return (
-        <Flex
-            flexWrap='wrap'
-            gap='5'
-            justifyContent='center'
-        >
-            {
-                props.items.map(i => 
-                    <ItemStack
-                        key={ i.item.id }
-                        itemModel={i}
-                        onClick={() => handleOnItemClick(i.item)}
-                    />
-                )
-            }
+        props.items.length > 0
+        ?
+            <Flex
+                flexWrap='wrap'
+                gap='2'
+                justifyContent='center'
+                borderRadius='3px'
+                border='1px solid'
+                borderColor='#454545'
+                padding='8px'
+            >
+                {
+                    props.items.map(i => 
+                        <ItemStack
+                            key={ i.item.id }
+                            itemModel={i}
+                            onClick={() => handleOnItemClick(i.item)}
+                        />
+                    )
+                }
 
-        </Flex>
+            </Flex>
+        :
+            <Flex 
+                flexWrap='wrap'
+                gap='2'
+                justifyContent='center'
+                borderRadius='3px'
+                border='1px solid'
+                borderColor='#454545'
+                padding='8px'
+            >
+                <Flex height='70px' justifyContent='center' alignItems='center'>
+                    Search and select items to start a build
+                </Flex>
+            </Flex>
     );
 };
 
