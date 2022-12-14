@@ -18,6 +18,7 @@ const ItemGrid = (props: ItemGridProps) => {
             flexWrap='wrap'
             gap='5'
             justifyContent='center'
+            overflowY='auto'
         >
             {
                 props.items.map(i => 

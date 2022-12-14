@@ -85,7 +85,7 @@ const Builder = () => {
 
     return (
         <Layout>
-            <Flex height='calc(100vh - 80px)' overflowY='auto' paddingBottom='5px' flexDirection='column' gap='10px'>
+            <Flex height='calc(100vh - 80px)'  paddingBottom='5px' flexDirection='column' gap='10px'>
                 <BuildGrid items={selectedItems} onItemClick={removeItemFromBuildGrid} />
                 <Flex justifyContent='center'>
                     <SearchForm onTextChange={handleSearchTermChange} isLoading={false}/>
