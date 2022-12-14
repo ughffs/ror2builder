@@ -1,4 +1,5 @@
 import { Flex } from "@chakra-ui/react";
+import Head from "next/head";
 import { useState, useEffect } from "react";
 import BuildGrid from "../components/buildGrid";
 import ItemGrid from "../components/itemGrid";
@@ -85,12 +86,17 @@ const Builder = () => {
 
     return (
         <Layout>
+            <Head>
+                <title>Builder Engine</title>
+            </Head>
             <Flex height='calc(100vh - 80px)'  paddingBottom='5px' flexDirection='column' gap='10px'>
                 <BuildGrid items={selectedItems} onItemClick={removeItemFromBuildGrid} />
                 <Flex justifyContent='center'>
                     <SearchForm onTextChange={handleSearchTermChange} isLoading={false}/>
                 </Flex>
-                <ItemGrid items={filteredItems} onItemClick={addItemToBuildGrid}/>
+                <Flex minWidth='1000px'>
+                    <ItemGrid items={filteredItems} onItemClick={addItemToBuildGrid}/>
+                </Flex>
             </Flex>
         </Layout>
     )
