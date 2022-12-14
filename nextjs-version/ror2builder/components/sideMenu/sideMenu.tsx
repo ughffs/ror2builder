@@ -12,9 +12,10 @@ const SideMenu = () => {
                 border='1px solid'
                 borderColor='grey'
                 padding='10px'
+                gap='10px'
             >
-                <Flex minWidth='100px'>Item 1</Flex>
-                <Flex>Item 2</Flex>
+                <Flex minWidth='100px'>My Builds</Flex>
+                <Flex>Other menu option</Flex>
             </Flex>
         </Flex>
     )

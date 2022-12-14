@@ -1,8 +1,9 @@
 import { Flex } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BuildGrid from "../components/buildGrid";
 import ItemGrid from "../components/itemGrid";
 import Layout from "../components/layout/layout"
+import SearchForm from "../components/searchForm/searchForm";
 import GetItems from "../shared/itemService";
 import { Item, ItemDisplayModel } from "../types/app.type";
 
@@ -10,6 +11,15 @@ const Builder = () => {
     const [items, setItems] = useState<Item[]>(GetItems());
     const [filteredItems, setFilteredItems] = useState<Item[]>([]);
     const [selectedItems, setSelectedItems] = useState<ItemDisplayModel[]>([]);
+    const [searchTerm, setSearchTerm] = useState<string>('');
+
+    useEffect(() => {
+        const itemsMatchingCriteria = items
+            .filter(item => item.title.toLocaleLowerCase().includes(searchTerm));
+        
+        setFilteredItems(itemsMatchingCriteria);
+
+    }, [searchTerm])
     
     const addItemToBuildGrid = (item: Item) => {
         const existingItem = findExistingItem(item);
@@ -69,11 +79,18 @@ const Builder = () => {
     const reduceStackCount = (itemModel: ItemDisplayModel) => 
         itemModel.stackCount--;
 
+    const handleSearchTermChange = (value: string) => {
+        setSearchTerm(value.toLowerCase());
+    }
+
     return (
         <Layout>
             <Flex height='calc(100vh - 80px)' overflowY='auto' paddingBottom='5px' flexDirection='column' gap='10px'>
                 <BuildGrid items={selectedItems} onItemClick={removeItemFromBuildGrid} />
-                <ItemGrid items={items} onItemClick={addItemToBuildGrid}/>
+                <Flex justifyContent='center'>
+                    <SearchForm onTextChange={handleSearchTermChange} isLoading={false}/>
+                </Flex>
+                <ItemGrid items={filteredItems} onItemClick={addItemToBuildGrid}/>
             </Flex>
         </Layout>
     )
