@@ -19,6 +19,7 @@ const ItemGrid = (props: ItemGridProps) => {
             gap='5'
             justifyContent='center'
             overflowY='auto'
+            flex='1'
         >
             {
                 props.items.map(i => 
