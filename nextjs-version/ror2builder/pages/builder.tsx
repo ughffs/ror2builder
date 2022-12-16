@@ -94,7 +94,7 @@ const Builder = () => {
                 <Flex justifyContent='center'>
                     <SearchForm onTextChange={handleSearchTermChange} isLoading={false}/>
                 </Flex>
-                <Flex minWidth='1000px'>
+                <Flex minWidth='1000px' overflowY='auto' padding='2px'>
                     <ItemGrid items={filteredItems} onItemClick={addItemToBuildGrid}/>
                 </Flex>
             </Flex>

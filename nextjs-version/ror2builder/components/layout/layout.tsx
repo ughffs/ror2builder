@@ -36,7 +36,7 @@ const Layout = (props: LayoutProps) => {
                 <Flex width='1000px' gap='20px' paddingTop='20px' height='calc(100vh - 50px)' overflow='hidden'>
                     { /*<SideMenu />*/ }
                     <Flex flex='1'>
-                        <main>{props.children}</main>
+                        {props.children}
                     </Flex>
                 </Flex>
             </Flex>
