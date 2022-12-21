@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useRouter } from 'next/router'
 import BuildGroupDisplay from '../../components/buildGroupDisplay/buildGroupDisplay';
 import { decode } from '../../shared/buildService';
@@ -39,6 +40,9 @@ const Build = () => {
 
     return (
         <>
+            <Head>
+                <title>Builder Viewer</title>
+            </Head>
             {
                 decodedValue.buildGroups.map(group => {
                     const key = decodedValue.buildGroups.indexOf(group);
