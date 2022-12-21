@@ -19,3 +19,16 @@ export interface ItemTypes {
             'lunar' | 
             'equipment';
 };
+
+export interface BuildGroup {
+    heading: string;
+    items: ItemDisplayModel[]
+}
+
+export interface Build {
+    buildGroups: BuildGroup[]
+}
+
+export interface Base64Build {
+    base64JsonBuild: string
+}

@@ -8,7 +8,7 @@ export interface BuildGridProps {
     onItemClick: (item: Item) => void
 };
 
-const ItemGrid = (props: BuildGridProps) => {
+const BuildGrid = (props: BuildGridProps) => {
 
     const handleOnItemClick = (item: Item) => {
         props.onItemClick(item);
@@ -25,6 +25,7 @@ const ItemGrid = (props: BuildGridProps) => {
                 border='1px solid'
                 borderColor='#454545'
                 padding='8px'
+                flex='1'
             >
                 {
                     props.items.map(i => 
@@ -46,6 +47,7 @@ const ItemGrid = (props: BuildGridProps) => {
                 border='1px solid'
                 borderColor='#454545'
                 padding='8px'
+                flex='1'
             >
                 <Flex height='70px' justifyContent='center' alignItems='center'>
                     Search and select items to start a build
@@ -54,4 +56,4 @@ const ItemGrid = (props: BuildGridProps) => {
     );
 };
 
-export default ItemGrid;
+export default BuildGrid;
